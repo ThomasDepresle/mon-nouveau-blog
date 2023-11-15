@@ -50,7 +50,7 @@ def character_detail(request, id_character):
 
                 return redirect('character_detail', id_character=id_character)
             else:
-                form.add_error('lieu', 'Le lieu de destination n\'est pas libre ou est identique à l\'actuel.')
+                form.add_error('lieu', 'Le changement n\'est pas possible')
     else:
         form = MoveForm(instance=character)
 
